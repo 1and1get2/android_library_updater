@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 import urllib.request
 import xml.etree.ElementTree as ET
 from collections import namedtuple
@@ -39,7 +41,7 @@ class Artifact():
         self.artifactName = name
         self.versions = versions.split(',')
         self.latestVersion = self.versions[len(self.versions) - 1]
-        print("Artifact - " + group.groupName + ":" + name + ":" + self.latestVersion + " Version: " + str(len(self.latestVersion)))
+        print("Artifact - " + group.groupName + ":" + name + ":" + self.latestVersion + " #: " + str(len(self.latestVersion)))
 
     
     def printInfo(self):
